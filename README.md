@@ -58,7 +58,7 @@ Remark: in the `global_ba` function, we use a slightly larger `eigen_ratio=0.2` 
 ### 3.4 Try Our Data
 The zipped pcd files and their initial poses of our self-collected [park](https://connecthkuhk-my.sharepoint.com/:u:/g/personal/xliuaa_connect_hku_hk/EbIOZhucOxJMs_m5_4JheNUBIj1FILxNmgVX0vt4C7madw?e=LD1XQh) and the public [KITTI 07](https://connecthkuhk-my.sharepoint.com/:u:/g/personal/xliuaa_connect_hku_hk/EdDPCY06Xa5CnmKG7_fbmq8BW9jpNZGRsVxtHLt80voKaw?e=nJWZjF) dataset have been uploaded to OneDrive. You could download them and directly run the code with the parameters provided.
 
-Remark: `hba.launch` only optimizes the LiDAR poses but does not visualize the point cloud map and `visualize.launch` is used to view the point cloud map.
+Remark: `hba.launch` only optimizes the LiDAR poses but does not visualize the point cloud map and `visualize.launch` is used to view the point cloud map. One more thing, when you launch the `hba.launch`, when the launch completes, it only optimizes the poses once. So if you are not satisfied with the result, you could execute the launch again.
 
 ## **4. Applications**
 
