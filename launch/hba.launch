@@ -1,0 +1,14 @@
+<launch>
+  <node pkg="hba" type="hba" name="hba" output="screen">
+    <param name="data_path" type="string" value="/home/sam/Desktop/kitti07/"/>
+    <param name="total_layer_num" type="int" value="3"/>
+    <param name="pcd_name_fill_num" type="int" value="5"/> <!--set 5 for kitti07 and 0 for park-->
+    <param name="thread_num" type="int" value="16"/>
+  </node>
+
+  <arg name="rviz" default="0"/>
+  <group if="$(arg rviz)">
+    <node launch-prefix="nice" pkg="rviz" type="rviz" name="rviz"
+    args="-d $(find hba)/rviz_cfg/rosbag.rviz" />
+  </group>
+</launch>
