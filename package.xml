@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <package format="2">
   <name>hba</name>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <description>The hierarchical bundle adjustment package</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <!-- Example:  -->
   <!-- <maintainer email="jane.doe@example.com">Jane Doe</maintainer> -->
-  <maintainer email="xliuaa@connect.hku.hk">sam</maintainer>
+  <maintainer email="xliuaa@connect.hku.hk">Xiyuan Liu</maintainer>
 
 
   <!-- One license tag required, multiple allowed, one license per tag -->

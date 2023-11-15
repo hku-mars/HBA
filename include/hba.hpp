@@ -196,7 +196,7 @@ public:
     {
       if(i > 0) initial.insert(i, gtsam::Pose3(gtsam::Rot3(init_pose[i].q.toRotationMatrix()), gtsam::Point3(init_pose[i].t)));
 
-      if(i%GAP == 0)
+      if(i%GAP == 0 && cnt < init_cov.size())
         for(int j = 0; j < WIN_SIZE-1; j++)
           for(int k = j+1; k < WIN_SIZE; k++)
           {
