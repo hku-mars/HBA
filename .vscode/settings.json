@@ -1,5 +1,6 @@
 {
   "files.associations": {
-    "thread": "cpp"
+    "thread": "cpp",
+    "fstream": "cpp"
   }
 }

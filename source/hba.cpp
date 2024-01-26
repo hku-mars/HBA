@@ -417,7 +417,7 @@ void global_ba(LAYER& layer)
       dsp_t += ros::Time::now().toSec() - t0;
       t0 = ros::Time::now().toSec();
       cut_voxel(surf_map, *src_pc[i], Quaterniond(x_buf[i].R), x_buf[i].p, i,
-                layer.voxel_size, window_size, layer.eigen_ratio*2);
+                layer.voxel_size, window_size, layer.eigen_ratio);
       cut_t += ros::Time::now().toSec() - t0;
     }
     t0 = ros::Time::now().toSec();
@@ -511,7 +511,10 @@ int main(int argc, char** argv)
     std::cout<<"---------------------"<<std::endl;
     distribute_thread(hba.layers[i], hba.layers[i+1]);
     hba.update_next_layer_state(i);
+    for (int j = 0; j < hba.layers[i + 1].pcds.size(); j++)
+			pcl::io::savePCDFileBinary(hba.layers[i + 1].data_path + "pcd/" + to_string(j) + ".pcd", *hba.layers[i + 1].pcds[j]);
   }
+  exit(0);
   global_ba(hba.layers[total_layer_num-1]);
   hba.pose_graph_optimization();
   printf("iteration complete\n");

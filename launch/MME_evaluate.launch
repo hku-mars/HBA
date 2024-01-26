@@ -1,0 +1,6 @@
+<launch>
+  <node pkg="hba" type="calculate_MME" name="calculate_MME" output="screen">
+    <param name="file_path" type="string" value="path_to_your_pcd_file"/>
+    <param name="THR_NUM" type="int" value="8"/>
+  </node>
+</launch>

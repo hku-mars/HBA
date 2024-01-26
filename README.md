@@ -84,6 +84,6 @@ HBA has participated in [HILTI SLAM Challenge](https://hilti-challenge.com/) and
 In the development of **HBA**, we stand on the state-of-the-art work: [BALM2](https://github.com/hku-mars/BALM).
 
 ## **6. License**
-The source code is released under GPLv2 license.
+The source code is released under [GPLv2](LICENSE) license.
 
 We are still working on improving the performance and reliability of our codes. For any technical issues, please contact us via email xliuaa@connect.hku.hk. For commercial use, please contact Dr. Fu Zhang fuzhang@hku.hk.
