@@ -611,6 +611,8 @@ public:
   void remove_outlier(vector<IMUST>& x_stats, VOX_HESS& voxhess, double ratio)
   {
     std::vector<double> residuals = voxhess.evaluate_residual(x_stats);
+    if(residuals.empty())
+        return;
     std::sort(residuals.begin(), residuals.end()); // sort in ascending order
     double threshold = residuals[std::floor((1-ratio)*voxhess.plvec_voxels.size())-1];
     int reject_num = std::floor(ratio * voxhess.plvec_voxels.size());
