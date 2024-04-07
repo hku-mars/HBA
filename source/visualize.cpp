@@ -23,7 +23,6 @@
 #include "ros/ros.h"
 #include <math.h>
 #include <rosbag/bag.h>
-#include <ceres/ceres.h>
 
 #include "ba.hpp"
 #include "tools.hpp"
