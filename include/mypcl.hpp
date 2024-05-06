@@ -56,9 +56,8 @@ namespace mypcl
     std::fstream file;
     file.open(filename);
     double tx, ty, tz, w, x, y, z;
-    while(!file.eof())
+    while(file >> tx >> ty >> tz >> w >> x >> y >> z)
     {
-      file >> tx >> ty >> tz >> w >> x >> y >> z;
       Eigen::Quaterniond q(w, x, y, z);
       Eigen::Vector3d t(tx, ty, tz);
       pose_vec.push_back(pose(qe * q, qe * t + te));
